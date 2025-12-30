@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Get in touch with SHOENIVERSE. We'd love to hear from you!">
+	<title>Contact Us - SHOENIVERSE</title>
+	<link rel="stylesheet" href="contact.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="banner">
+		<nav class="navbar">
+			<div class="navbar-container">
+				<img src="LOGO-removebg-preview.png" alt="SHOENIVERSE Logo" class="logo">
+				<div class="nav-right-group">
+					<ul class="nav-menu">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html" class="active">Contact Us</a></li>
+					</ul>
+					<div class="nav-right">
+						<button class="cart-icon-btn" id="cartIconBtn" onclick="window.location.href='products.html'">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<circle cx="9" cy="21" r="1"></circle>
+								<circle cx="20" cy="21" r="1"></circle>
+								<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+							</svg>
+							<span class="cart-badge" id="cartBadge">0</span>
+						</button>
+					</div>
+				</div>
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</nav>
+
+		<div class="contact-container">
+			<h1 class="page-title">Get In Touch</h1>
+			<p class="page-subtitle">We'd love to hear from you! Send us a message and we'll respond as soon as possible.</p>
+			
+			<div class="contact-wrapper">
+				<div class="contact-box">
+					<h2 class="form-title">Send Us a Message</h2>
+					<form id="contactForm">
+						<div class="form-row">
+							<div class="form-group">
+								<label for="name">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+										<circle cx="12" cy="7" r="4"></circle>
+									</svg>
+									Full Name
+								</label>
+								<input type="text" id="name" name="name" class="input-field" placeholder="Enter your full name" required>
+							</div>
+							<div class="form-group">
+								<label for="phone">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+									</svg>
+									Phone Number
+								</label>
+								<input type="tel" id="phone" name="phone" class="input-field" placeholder="Enter your phone number">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="email">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+									<polyline points="22,6 12,13 2,6"></polyline>
+								</svg>
+								Email Address
+							</label>
+							<input type="email" id="email" name="email" class="input-field" placeholder="Enter your email address" required>
+						</div>
+						<div class="form-group">
+							<label for="subject">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<line x1="3" y1="12" x2="21" y2="12"></line>
+									<line x1="3" y1="6" x2="21" y2="6"></line>
+									<line x1="3" y1="18" x2="21" y2="18"></line>
+								</svg>
+								Subject
+							</label>
+							<select id="subject" name="subject" class="input-field" required>
+								<option value="">Select a subject</option>
+								<option value="general">General Inquiry</option>
+								<option value="order">Order Question</option>
+								<option value="support">Customer Support</option>
+								<option value="feedback">Feedback</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="message">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+								</svg>
+								Your Message
+							</label>
+							<textarea id="message" name="message" class="input-field textarea-field" placeholder="Type your message here..." rows="5" required></textarea>
+							<span class="char-count"><span id="charCount">0</span>/500</span>
+						</div>
+						<div class="form-message" id="formMessage"></div>
+						<button type="submit" class="btn" id="submitBtn">
+							<span>Send Message</span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<line x1="22" y1="2" x2="11" y2="13"></line>
+								<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+							</svg>
+						</button>
+					</form>
+				</div>
+
+				<div class="contact-info-section">
+					<div class="contact-info">
+						<div class="info-card">
+							<div class="info-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+									<circle cx="12" cy="10" r="3"></circle>
+								</svg>
+							</div>
+							<h3>Address</h3>
+							<p>San Martin, Villanueva<br>Misamis Oriental, 9002</p>
+						</div>
+						<div class="info-card">
+							<div class="info-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+									<polyline points="22,6 12,13 2,6"></polyline>
+								</svg>
+							</div>
+							<h3>Email</h3>
+							<p><a href="mailto:Nerickjanio77@Gmail.com">Nerickjanio77@Gmail.com</a></p>
+						</div>
+						<div class="info-card">
+							<div class="info-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+									<circle cx="12" cy="7" r="4"></circle>
+								</svg>
+							</div>
+							<h3>Owner</h3>
+							<p>Nerick Edward Macapayag</p>
+						</div>
+						<div class="info-card">
+							<div class="info-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<circle cx="12" cy="12" r="10"></circle>
+									<polyline points="12 6 12 12 16 14"></polyline>
+								</svg>
+							</div>
+							<h3>Business Hours</h3>
+							<p>Monday - Saturday<br>9:00 AM - 6:00 PM</p>
+						</div>
+					</div>
+
+					<div class="social-links">
+						<h3>Follow Us</h3>
+						<div class="social-icons">
+							<a href="#" class="social-icon" aria-label="Facebook">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+									<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+								</svg>
+							</a>
+							<a href="#" class="social-icon" aria-label="Instagram">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+									<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+									<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+								</svg>
+							</a>
+							<a href="#" class="social-icon" aria-label="Twitter">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+									<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="footer-content">
+			<p>&copy; 2024 SHOENIVERSE. All rights reserved.</p>
+			<p>San Martin, Villanueva Misamis Oriental, 9002</p>
+		</div>
+	</footer>
+
+	<script>
+		// Mobile menu toggle
+		const hamburger = document.querySelector('.hamburger');
+		const navMenu = document.querySelector('.nav-menu');
+		const navbar = document.querySelector('.navbar');
+		
+		if (hamburger) {
+			hamburger.addEventListener('click', () => {
+				navMenu.classList.toggle('active');
+				hamburger.classList.toggle('active');
+			});
+		}
+
+		// Close menu when clicking on a link
+		document.querySelectorAll('.nav-menu a').forEach(link => {
+			link.addEventListener('click', () => {
+				navMenu.classList.remove('active');
+				hamburger.classList.remove('active');
+			});
+		});
+
+		// Navbar scroll effect
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 50) {
+				navbar.classList.add('scrolled');
+			} else {
+				navbar.classList.remove('scrolled');
+			}
+		});
+
+		// Character counter for message
+		const messageField = document.getElementById('message');
+		const charCount = document.getElementById('charCount');
+		const maxChars = 500;
+
+		if (messageField && charCount) {
+			messageField.addEventListener('input', function() {
+				const currentLength = this.value.length;
+				charCount.textContent = currentLength;
+				
+				if (currentLength > maxChars) {
+					this.value = this.value.substring(0, maxChars);
+					charCount.textContent = maxChars;
+				}
+				
+				const charCountElement = this.parentElement.querySelector('.char-count');
+				if (currentLength > maxChars * 0.9) {
+					charCountElement.style.color = '#e74c3c';
+				} else {
+					charCountElement.style.color = '#666';
+				}
+			});
+		}
+
+		// Form submission with better UX
+		const contactForm = document.getElementById('contactForm');
+		const formMessage = document.getElementById('formMessage');
+		const submitBtn = document.getElementById('submitBtn');
+
+		if (contactForm) {
+			contactForm.addEventListener('submit', function(e) {
+				e.preventDefault();
+				
+				// Disable submit button
+				submitBtn.disabled = true;
+				submitBtn.innerHTML = '<span>Sending...</span>';
+				
+				// Simulate form submission (replace with actual API call)
+				setTimeout(() => {
+					formMessage.className = 'form-message success';
+					formMessage.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Thank you for your message! We will get back to you soon.';
+					
+					// Reset form
+					this.reset();
+					if (charCount) charCount.textContent = '0';
+					
+					// Re-enable button
+					setTimeout(() => {
+						submitBtn.disabled = false;
+						submitBtn.innerHTML = '<span>Send Message</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>';
+					}, 2000);
+					
+					// Hide message after 5 seconds
+					setTimeout(() => {
+						formMessage.className = 'form-message';
+						formMessage.innerHTML = '';
+					}, 5000);
+				}, 1500);
+			});
+		}
+
+		// Update cart badge
+		function updateCartBadge() {
+			const cart = JSON.parse(localStorage.getItem('cart')) || [];
+			const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+			const cartBadge = document.getElementById('cartBadge');
+			if (cartBadge) {
+				cartBadge.textContent = totalItems;
+				cartBadge.style.display = totalItems > 0 ? 'flex' : 'none';
+			}
+		}
+		updateCartBadge();
+	</script>
+</body>
+</html>
