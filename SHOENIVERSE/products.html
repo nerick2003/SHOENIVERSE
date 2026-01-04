@@ -44,7 +44,6 @@
 		<div class="products-container">
 			<h1 class="page-title">Our Products</h1>
 			
-			<!-- Search and Filter Section -->
 			<div class="filter-section">
 				<div class="search-box">
 					<input type="text" id="searchInput" placeholder="Search products..." class="search-input">
@@ -216,7 +215,6 @@
 		</div>
 	</div>
 
-	<!-- Cart Sidebar -->
 	<div class="cart-sidebar" id="cartSidebar">
 		<div class="cart-header">
 			<h2>Shopping Cart</h2>
@@ -246,7 +244,6 @@
 	</div>
 	<div class="cart-overlay" id="cartOverlay"></div>
 
-	<!-- Checkout Modal -->
 	<div class="checkout-modal" id="checkoutModal">
 		<div class="checkout-modal-content">
 			<div class="checkout-header">
@@ -321,7 +318,6 @@
 				<div class="checkout-section">
 					<h3>Order Summary</h3>
 					<div class="order-summary" id="checkoutOrderSummary">
-						<!-- Order items will be populated here -->
 					</div>
 					<div class="summary-totals">
 						<div class="summary-row">
@@ -348,7 +344,6 @@
 	</div>
 	<div class="checkout-overlay" id="checkoutOverlay"></div>
 
-	<!-- Thank You Modal -->
 	<div class="thank-you-modal" id="thankYouModal">
 		<div class="thank-you-content">
 			<div class="thank-you-icon">✓</div>
@@ -356,7 +351,6 @@
 			<p class="thank-you-message">Thank you for buying in <strong>SHOENIVERSE</strong></p>
 			<p class="thank-you-submessage">Your order has been placed successfully. We'll send you a confirmation email shortly.</p>
 			<div class="thank-you-order-info" id="thankYouOrderInfo">
-				<!-- Order details will be shown here -->
 			</div>
 			<button class="button-5 thank-you-btn" onclick="closeThankYou()">Continue Shopping</button>
 		</div>
@@ -371,7 +365,6 @@
 	</footer>
 
 	<script>
-		// Mobile menu toggle
 		const hamburger = document.querySelector('.hamburger');
 		const navMenu = document.querySelector('.nav-menu');
 		const navbar = document.querySelector('.navbar');
@@ -383,7 +376,6 @@
 			});
 		}
 
-		// Close menu when clicking on a link
 		document.querySelectorAll('.nav-menu a').forEach(link => {
 			link.addEventListener('click', () => {
 				navMenu.classList.remove('active');
@@ -391,7 +383,6 @@
 			});
 		});
 
-		// Navbar scroll effect
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 50) {
 				navbar.classList.add('scrolled');
@@ -400,7 +391,6 @@
 			}
 		});
 
-		// Product Search and Filter Functionality
 		const searchInput = document.getElementById('searchInput');
 		const sortSelect = document.getElementById('sortSelect');
 		const filterBtns = document.querySelectorAll('.filter-btn');
@@ -411,18 +401,15 @@
 		let currentCategory = 'all';
 		let currentSort = 'default';
 
-		// Search functionality
 		searchInput.addEventListener('input', () => {
 			filterProducts();
 		});
 
-		// Sort functionality
 		sortSelect.addEventListener('change', (e) => {
 			currentSort = e.target.value;
 			filterProducts();
 		});
 
-		// Category filter functionality
 		filterBtns.forEach(btn => {
 			btn.addEventListener('click', () => {
 				filterBtns.forEach(b => b.classList.remove('active'));
@@ -432,7 +419,6 @@
 			});
 		});
 
-		// Filter and sort products
 		function filterProducts() {
 			const searchTerm = searchInput.value.toLowerCase();
 			let visibleProducts = [];
@@ -454,7 +440,6 @@
 				}
 			});
 
-			// Sort products
 			if (currentSort !== 'default') {
 				visibleProducts.sort((a, b) => {
 					if (currentSort === 'price-low') {
@@ -468,32 +453,26 @@
 					}
 				});
 
-				// Reorder in DOM
 				visibleProducts.forEach(card => {
 					productsGrid.appendChild(card);
 				});
 			}
 
-			// Update product count
 			productCount.textContent = visibleProducts.length;
 		}
 
-		// Cart Management
 		let cart = JSON.parse(localStorage.getItem('cart')) || [];
 		let currentModalProduct = null;
 
-		// Normalize cart data (ensure IDs and sizes are strings)
 		cart = cart.map(item => ({
 			...item,
 			id: String(item.id),
 			size: String(item.size)
 		}));
 
-		// Initialize cart display
 		updateCartBadge();
 		renderCart();
 
-		// Cart sidebar toggle
 		const cartIconBtn = document.getElementById('cartIconBtn');
 		const cartSidebar = document.getElementById('cartSidebar');
 		const cartClose = document.getElementById('cartClose');
@@ -515,7 +494,6 @@
 			document.body.style.overflow = '';
 		}
 
-		// Add to cart functionality
 		const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
 		addToCartBtns.forEach(btn => {
 			btn.addEventListener('click', () => {
@@ -528,7 +506,6 @@
 		});
 
 		function showSizeSelectionModal(id, name, price, image) {
-			// Create size selection modal
 			const modal = document.createElement('div');
 			modal.className = 'size-selection-modal';
 			modal.innerHTML = `
@@ -571,7 +548,6 @@
 			let selectedSize = '9';
 			let selectedQuantity = 1;
 
-			// Size selection
 			const sizeOptions = modal.querySelectorAll('.size-option');
 			sizeOptions.forEach(option => {
 				option.addEventListener('click', () => {
@@ -581,7 +557,6 @@
 				});
 			});
 
-			// Quantity controls
 			const qtyValue = modal.querySelector('.qty-value-modal');
 			const qtyDecrease = modal.querySelector('.qty-decrease-modal');
 			const qtyIncrease = modal.querySelector('.qty-increase-modal');
@@ -600,14 +575,12 @@
 				}
 			});
 
-			// Add to cart button
 			const addBtn = modal.querySelector('.size-add-to-cart-btn');
 			addBtn.addEventListener('click', () => {
 				addToCart(id, name, price, image, selectedSize, selectedQuantity);
 				modal.remove();
 			});
 
-			// Close modal
 			const closeBtn = modal.querySelector('.size-modal-close');
 			closeBtn.addEventListener('click', () => {
 				modal.remove();
@@ -621,7 +594,6 @@
 		}
 
 		function addToCart(id, name, price, image, size = '9', quantity = 1) {
-			// Convert to strings for consistent comparison
 			const idStr = String(id);
 			const sizeStr = String(size);
 			const quantityNum = parseInt(quantity) || 1;
@@ -644,7 +616,6 @@
 			updateCartBadge();
 			renderCart();
 			
-			// Show notification
 			const message = quantityNum > 1 
 				? `${quantityNum} items added to cart!` 
 				: 'Item added to cart!';
@@ -652,7 +623,6 @@
 		}
 
 		function removeFromCart(id, size) {
-			// Convert id to string for comparison (in case it's stored as number)
 			const idStr = String(id);
 			const sizeStr = String(size);
 			cart = cart.filter(item => !(String(item.id) === idStr && String(item.size) === sizeStr));
@@ -662,7 +632,6 @@
 		}
 
 		function updateQuantity(id, size, change) {
-			// Convert id to string for comparison (in case it's stored as number)
 			const idStr = String(id);
 			const sizeStr = String(size);
 			const item = cart.find(item => String(item.id) === idStr && String(item.size) === sizeStr);
@@ -692,7 +661,6 @@
 			const cartEmpty = document.getElementById('cartEmpty');
 			const cartSummary = document.getElementById('cartSummary');
 			
-			// Remove all existing cart-item elements
 			const existingItems = cartItems.querySelectorAll('.cart-item');
 			existingItems.forEach(item => item.remove());
 			
@@ -700,7 +668,6 @@
 				if (cartEmpty) {
 					cartEmpty.style.display = 'flex';
 				} else {
-					// Recreate cart-empty if it was removed
 					const emptyDiv = document.createElement('div');
 					emptyDiv.className = 'cart-empty';
 					emptyDiv.id = 'cartEmpty';
@@ -723,7 +690,6 @@
 				cartSummary.style.display = 'block';
 			}
 			
-			// Create cart items with individual event listeners
 			cart.forEach((item, index) => {
 				const cartItemDiv = document.createElement('div');
 				cartItemDiv.className = 'cart-item';
@@ -751,7 +717,6 @@
 					</div>
 				`;
 				
-				// Attach event listeners directly to buttons
 				const removeBtn = cartItemDiv.querySelector('.remove-btn');
 				const qtyDecrease = cartItemDiv.querySelector('.qty-decrease');
 				const qtyIncrease = cartItemDiv.querySelector('.qty-increase');
@@ -797,7 +762,6 @@
 			const checkoutOverlay = document.getElementById('checkoutOverlay');
 			const checkoutOrderSummary = document.getElementById('checkoutOrderSummary');
 			
-			// Populate order summary
 			checkoutOrderSummary.innerHTML = '';
 			cart.forEach(item => {
 				const orderItem = document.createElement('div');
@@ -815,7 +779,6 @@
 				checkoutOrderSummary.appendChild(orderItem);
 			});
 			
-			// Update totals
 			const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 			const shipping = subtotal >= 5000 ? 0 : 200;
 			const total = subtotal + shipping;
@@ -853,12 +816,10 @@
 			}, 2000);
 		}
 
-		// Make functions globally accessible
 		window.closeCart = closeCart;
 		window.checkout = checkout;
 		window.closeCheckout = closeCheckout;
 
-		// Checkout modal close handlers
 		const checkoutClose = document.getElementById('checkoutClose');
 		const checkoutOverlay = document.getElementById('checkoutOverlay');
 		if (checkoutClose) {
@@ -868,7 +829,6 @@
 			checkoutOverlay.addEventListener('click', closeCheckout);
 		}
 
-		// Card number formatting
 		const cardNumberInput = document.getElementById('cardNumber');
 		if (cardNumberInput) {
 			cardNumberInput.addEventListener('input', (e) => {
@@ -878,7 +838,6 @@
 			});
 		}
 
-		// Expiry date formatting
 		const cardExpiryInput = document.getElementById('cardExpiry');
 		if (cardExpiryInput) {
 			cardExpiryInput.addEventListener('input', (e) => {
@@ -890,7 +849,6 @@
 			});
 		}
 
-		// CVV formatting (numbers only)
 		const cardCVVInput = document.getElementById('cardCVV');
 		if (cardCVVInput) {
 			cardCVVInput.addEventListener('input', (e) => {
@@ -898,13 +856,11 @@
 			});
 		}
 
-		// Form submission
 		const checkoutForm = document.getElementById('checkoutForm');
 		if (checkoutForm) {
 			checkoutForm.addEventListener('submit', (e) => {
 				e.preventDefault();
 				
-				// Get form data
 				const formData = {
 					name: document.getElementById('checkoutName').value,
 					email: document.getElementById('checkoutEmail').value,
@@ -919,22 +875,15 @@
 					total: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0) + (cart.reduce((sum, item) => sum + (item.price * item.quantity), 0) >= 5000 ? 0 : 200)
 				};
 				
-				// Show thank you modal
 				showThankYou(formData);
 				
-				// Clear cart
 				cart = [];
 				saveCart();
 				updateCartBadge();
 				renderCart();
 				
-				// Close checkout modal
 				closeCheckout();
-				
-				// Close cart sidebar
 				closeCart();
-				
-				// Reset form
 				checkoutForm.reset();
 			});
 		}
@@ -944,15 +893,12 @@
 			const thankYouOverlay = document.getElementById('thankYouOverlay');
 			const thankYouOrderInfo = document.getElementById('thankYouOrderInfo');
 			
-			// Generate order number
 			const orderNumber = 'SHOE-' + Date.now().toString().slice(-8);
 			
-			// Calculate totals
 			const subtotal = formData.order.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 			const shipping = subtotal >= 5000 ? 0 : 200;
 			const total = subtotal + shipping;
 			
-			// Display order info
 			thankYouOrderInfo.innerHTML = `
 				<div class="order-number">
 					<p><strong>Order Number:</strong> ${orderNumber}</p>
@@ -979,10 +925,8 @@
 			document.body.style.overflow = '';
 		}
 
-		// Make function globally accessible
 		window.closeThankYou = closeThankYou;
 
-		// Product Details Modal
 		const quickViewBtns = document.querySelectorAll('.quick-view-btn');
 		
 		quickViewBtns.forEach(btn => {
@@ -993,10 +937,8 @@
 		});
 
 		function showProductModal(productNum) {
-			// Try to find by ID first (for hash navigation)
 			let card = document.querySelector(`#product-${productNum}`);
 			
-			// If not found by ID, try to find by data-product attribute
 			if (!card) {
 				card = document.querySelector(`.product-card [data-product="${productNum}"]`)?.closest('.product-card');
 			}
@@ -1019,7 +961,6 @@
 				image: productImage
 			};
 
-			// Create modal
 			const modal = document.createElement('div');
 			modal.className = 'product-modal';
 			modal.innerHTML = `
@@ -1053,7 +994,6 @@
 			document.body.appendChild(modal);
 			modal.style.display = 'flex';
 
-			// Add to cart from modal
 			modal.querySelector('#modalAddToCart').addEventListener('click', () => {
 				const size = modal.querySelector('#modalSizeSelect').value;
 				if (currentModalProduct) {
@@ -1062,10 +1002,8 @@
 				}
 			});
 
-			// Close modal
 			modal.querySelector('.modal-close').addEventListener('click', () => {
 				modal.remove();
-				// Remove hash from URL when closing
 				if (window.location.hash) {
 					history.replaceState(null, null, window.location.pathname);
 				}
@@ -1074,7 +1012,6 @@
 			modal.addEventListener('click', (e) => {
 				if (e.target === modal) {
 					modal.remove();
-					// Remove hash from URL when closing
 					if (window.location.hash) {
 						history.replaceState(null, null, window.location.pathname);
 					}
@@ -1082,18 +1019,14 @@
 			});
 		}
 
-		// Auto-open product modal when page loads with hash (from Quick View)
 		function openProductModalFromHash() {
 			const hash = window.location.hash;
 			if (hash) {
-				// Extract product number from hash (e.g., #product-1 -> 1)
 				const match = hash.match(/product-(\d+)/);
 				if (match) {
 					const productNum = match[1];
-					// Wait a bit for page to fully load
 					setTimeout(() => {
 						showProductModal(productNum);
-						// Scroll to the product card as well
 						const productElement = document.querySelector(hash);
 						if (productElement) {
 							setTimeout(() => {
@@ -1105,10 +1038,7 @@
 			}
 		}
 
-		// Run on page load
 		window.addEventListener('load', openProductModalFromHash);
-
-		// Also handle hash changes (in case user navigates with back/forward)
 		window.addEventListener('hashchange', openProductModalFromHash);
 	</script>
 </body>

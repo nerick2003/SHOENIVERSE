@@ -42,13 +42,11 @@
 		</nav>
 
 		<div class="about-container">
-			<!-- Hero Section -->
 			<div class="hero-section fade-in">
 				<h1 class="page-title">About SHOENIVERSE</h1>
 				<p class="hero-subtitle">Your Premier Destination for Premium Footwear</p>
 			</div>
 
-			<!-- Main About Content -->
 			<div class="about-content fade-in-delay">
 				<div class="about-intro">
 					<p class="about-text">
@@ -65,7 +63,6 @@
 				</div>
 			</div>
 
-			<!-- Mission & Vision Section -->
 			<div class="mission-vision-section fade-in-delay-2">
 				<div class="mv-card">
 					<div class="mv-icon">
@@ -90,7 +87,6 @@
 				</div>
 			</div>
 
-			<!-- Values Section -->
 			<div class="values-section fade-in-delay-2">
 				<h2 class="section-title">Our Core Values</h2>
 				<div class="values-grid">
@@ -117,7 +113,6 @@
 				</div>
 			</div>
 
-			<!-- Why Choose Us Section -->
 			<div class="why-choose-section fade-in-delay-2">
 				<h2 class="section-title">Why Choose SHOENIVERSE?</h2>
 				<div class="features-grid">
@@ -144,7 +139,6 @@
 				</div>
 			</div>
 
-			<!-- Location Section -->
 			<div class="location-section fade-in-delay-3">
 				<h2 class="section-title">Visit Our Store</h2>
 				<p class="location-intro">Come visit us at our physical location and experience our products firsthand!</p>
@@ -177,7 +171,6 @@
 	</footer>
 
 	<script>
-		// Mobile menu toggle
 		const hamburger = document.querySelector('.hamburger');
 		const navMenu = document.querySelector('.nav-menu');
 		const navbar = document.querySelector('.navbar');
@@ -189,7 +182,6 @@
 			});
 		}
 
-		// Close menu when clicking on a link
 		document.querySelectorAll('.nav-menu a').forEach(link => {
 			link.addEventListener('click', () => {
 				navMenu.classList.remove('active');
@@ -197,7 +189,6 @@
 			});
 		});
 
-		// Navbar scroll effect
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 50) {
 				navbar.classList.add('scrolled');
@@ -206,7 +197,6 @@
 			}
 		});
 
-		// Update cart badge
 		function updateCartBadge() {
 			const cart = JSON.parse(localStorage.getItem('cart')) || [];
 			const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);

@@ -198,7 +198,6 @@
 	</footer>
 
 	<script>
-		// Mobile menu toggle
 		const hamburger = document.querySelector('.hamburger');
 		const navMenu = document.querySelector('.nav-menu');
 		const navbar = document.querySelector('.navbar');
@@ -210,7 +209,6 @@
 			});
 		}
 
-		// Close menu when clicking on a link
 		document.querySelectorAll('.nav-menu a').forEach(link => {
 			link.addEventListener('click', () => {
 				navMenu.classList.remove('active');
@@ -218,7 +216,6 @@
 			});
 		});
 
-		// Navbar scroll effect
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 50) {
 				navbar.classList.add('scrolled');
@@ -227,7 +224,6 @@
 			}
 		});
 
-		// Character counter for message
 		const messageField = document.getElementById('message');
 		const charCount = document.getElementById('charCount');
 		const maxChars = 500;
@@ -251,7 +247,6 @@
 			});
 		}
 
-		// Form submission with better UX
 		const contactForm = document.getElementById('contactForm');
 		const formMessage = document.getElementById('formMessage');
 		const submitBtn = document.getElementById('submitBtn');
@@ -260,26 +255,21 @@
 			contactForm.addEventListener('submit', function(e) {
 				e.preventDefault();
 				
-				// Disable submit button
 				submitBtn.disabled = true;
 				submitBtn.innerHTML = '<span>Sending...</span>';
 				
-				// Simulate form submission (replace with actual API call)
 				setTimeout(() => {
 					formMessage.className = 'form-message success';
 					formMessage.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Thank you for your message! We will get back to you soon.';
 					
-					// Reset form
 					this.reset();
 					if (charCount) charCount.textContent = '0';
 					
-					// Re-enable button
 					setTimeout(() => {
 						submitBtn.disabled = false;
 						submitBtn.innerHTML = '<span>Send Message</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>';
 					}, 2000);
 					
-					// Hide message after 5 seconds
 					setTimeout(() => {
 						formMessage.className = 'form-message';
 						formMessage.innerHTML = '';
@@ -288,7 +278,6 @@
 			});
 		}
 
-		// Update cart badge
 		function updateCartBadge() {
 			const cart = JSON.parse(localStorage.getItem('cart')) || [];
 			const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);

@@ -60,7 +60,6 @@
 		</div>
 	</div>
 
-	<!-- Products Slideshow Section -->
 	<section class="products-slideshow-section" id="products-slideshow">
 		<div class="slideshow-container">
 			<h2 class="slideshow-title">Our Featured Products</h2>
@@ -70,6 +69,11 @@
 				<div class="slideshow-track" id="slideshowTrack">
 					<div class="slide">
 						<div class="product-badge new">NEW</div>
+						<button class="wishlist-btn" onclick="toggleWishlist('NIKE DUNKS 1', this)" aria-label="Add to wishlist">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+							</svg>
+						</button>
 						<div class="product-image-wrapper">
 							<img src="1.jpg" alt="Nike Dunks 1">
 							<div class="product-overlay">
@@ -83,28 +87,44 @@
 							</div>
 						</div>
 						<div class="slide-info">
-							<div class="product-rating">
-								<span class="stars">★★★★★</span>
-								<span class="rating-text">(4.8)</span>
+							<div class="product-header">
+								<div class="product-rating">
+									<span class="stars">★★★★★</span>
+									<span class="rating-text">(4.8)</span>
+									<span class="review-count">127 reviews</span>
+								</div>
+								<div class="stock-status in-stock">In Stock</div>
 							</div>
 							<h3>NIKE DUNKS 1</h3>
 							<p class="product-description">Premium quality with classic design</p>
+							<div class="product-features">
+								<span class="feature-tag">Free Shipping</span>
+								<span class="feature-tag">Authentic</span>
+							</div>
 							<div class="price-container">
 								<span class="price">₱6,000</span>
 								<span class="price-original">₱7,500</span>
+								<span class="discount-badge">-20%</span>
 							</div>
-							<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 1', 6000, '1.jpg')">
-								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-									<circle cx="9" cy="21" r="1"></circle>
-									<circle cx="20" cy="21" r="1"></circle>
-									<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-								</svg>
-								Add to Cart
-							</button>
+							<div class="product-actions">
+								<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 1', 6000, '1.jpg')">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<circle cx="9" cy="21" r="1"></circle>
+										<circle cx="20" cy="21" r="1"></circle>
+										<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+									</svg>
+									Add to Cart
+								</button>
+							</div>
 						</div>
 					</div>
 					<div class="slide">
 						<div class="product-badge bestseller">BESTSELLER</div>
+						<button class="wishlist-btn" onclick="toggleWishlist('NIKE DUNKS 2', this)" aria-label="Add to wishlist">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+							</svg>
+						</button>
 						<div class="product-image-wrapper">
 							<img src="2.jpg" alt="Nike Dunks 2">
 							<div class="product-overlay">
@@ -118,27 +138,44 @@
 							</div>
 						</div>
 						<div class="slide-info">
-							<div class="product-rating">
-								<span class="stars">★★★★★</span>
-								<span class="rating-text">(4.9)</span>
+							<div class="product-header">
+								<div class="product-rating">
+									<span class="stars">★★★★★</span>
+									<span class="rating-text">(4.9)</span>
+									<span class="review-count">203 reviews</span>
+								</div>
+								<div class="stock-status in-stock">In Stock</div>
 							</div>
 							<h3>NIKE DUNKS 2</h3>
 							<p class="product-description">Comfortable fit with modern style</p>
+							<div class="product-features">
+								<span class="feature-tag">Free Shipping</span>
+								<span class="feature-tag">Authentic</span>
+							</div>
 							<div class="price-container">
 								<span class="price">₱6,000</span>
+								<span class="price-original" style="display: none;"></span>
+								<span class="discount-badge" style="display: none;"></span>
 							</div>
-							<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 2', 6000, '2.jpg')">
-								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-									<circle cx="9" cy="21" r="1"></circle>
-									<circle cx="20" cy="21" r="1"></circle>
-									<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-								</svg>
-								Add to Cart
-							</button>
+							<div class="product-actions">
+								<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 2', 6000, '2.jpg')">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<circle cx="9" cy="21" r="1"></circle>
+										<circle cx="20" cy="21" r="1"></circle>
+										<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+									</svg>
+									Add to Cart
+								</button>
+							</div>
 						</div>
 					</div>
 					<div class="slide">
 						<div class="product-badge sale">-20%</div>
+						<button class="wishlist-btn" onclick="toggleWishlist('NIKE DUNKS 3', this)" aria-label="Add to wishlist">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+							</svg>
+						</button>
 						<div class="product-image-wrapper">
 							<img src="3.jpg" alt="Nike Dunks 3">
 							<div class="product-overlay">
@@ -152,28 +189,44 @@
 							</div>
 						</div>
 						<div class="slide-info">
-							<div class="product-rating">
-								<span class="stars">★★★★☆</span>
-								<span class="rating-text">(4.6)</span>
+							<div class="product-header">
+								<div class="product-rating">
+									<span class="stars">★★★★☆</span>
+									<span class="rating-text">(4.6)</span>
+									<span class="review-count">89 reviews</span>
+								</div>
+								<div class="stock-status low-stock">Only 3 left</div>
 							</div>
 							<h3>NIKE DUNKS 3</h3>
 							<p class="product-description">Limited edition colorway</p>
+							<div class="product-features">
+								<span class="feature-tag">Free Shipping</span>
+								<span class="feature-tag">Limited Edition</span>
+							</div>
 							<div class="price-container">
 								<span class="price">₱6,000</span>
 								<span class="price-original">₱7,500</span>
+								<span class="discount-badge">-20%</span>
 							</div>
-							<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 3', 6000, '3.jpg')">
-								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-									<circle cx="9" cy="21" r="1"></circle>
-									<circle cx="20" cy="21" r="1"></circle>
-									<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-								</svg>
-								Add to Cart
-							</button>
+							<div class="product-actions">
+								<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 3', 6000, '3.jpg')">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<circle cx="9" cy="21" r="1"></circle>
+										<circle cx="20" cy="21" r="1"></circle>
+										<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+									</svg>
+									Add to Cart
+								</button>
+							</div>
 						</div>
 					</div>
 					<div class="slide">
 						<div class="product-badge new">NEW</div>
+						<button class="wishlist-btn" onclick="toggleWishlist('NIKE DUNKS 4', this)" aria-label="Add to wishlist">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+							</svg>
+						</button>
 						<div class="product-image-wrapper">
 							<img src="4.jpg" alt="Nike Dunks 4">
 							<div class="product-overlay">
@@ -187,27 +240,44 @@
 							</div>
 						</div>
 						<div class="slide-info">
-							<div class="product-rating">
-								<span class="stars">★★★★★</span>
-								<span class="rating-text">(4.7)</span>
+							<div class="product-header">
+								<div class="product-rating">
+									<span class="stars">★★★★★</span>
+									<span class="rating-text">(4.7)</span>
+									<span class="review-count">156 reviews</span>
+								</div>
+								<div class="stock-status in-stock">In Stock</div>
 							</div>
 							<h3>NIKE DUNKS 4</h3>
 							<p class="product-description">Sporty design meets comfort</p>
+							<div class="product-features">
+								<span class="feature-tag">Free Shipping</span>
+								<span class="feature-tag">Authentic</span>
+							</div>
 							<div class="price-container">
 								<span class="price">₱6,000</span>
+								<span class="price-original" style="display: none;"></span>
+								<span class="discount-badge" style="display: none;"></span>
 							</div>
-							<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 4', 6000, '4.jpg')">
-								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-									<circle cx="9" cy="21" r="1"></circle>
-									<circle cx="20" cy="21" r="1"></circle>
-									<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-								</svg>
-								Add to Cart
-							</button>
+							<div class="product-actions">
+								<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 4', 6000, '4.jpg')">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<circle cx="9" cy="21" r="1"></circle>
+										<circle cx="20" cy="21" r="1"></circle>
+										<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+									</svg>
+									Add to Cart
+								</button>
+							</div>
 						</div>
 					</div>
 					<div class="slide">
 						<div class="product-badge bestseller">BESTSELLER</div>
+						<button class="wishlist-btn" onclick="toggleWishlist('NIKE DUNKS 5', this)" aria-label="Add to wishlist">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+							</svg>
+						</button>
 						<div class="product-image-wrapper">
 							<img src="5.jpg" alt="Nike Dunks 5">
 							<div class="product-overlay">
@@ -221,27 +291,44 @@
 							</div>
 						</div>
 						<div class="slide-info">
-							<div class="product-rating">
-								<span class="stars">★★★★★</span>
-								<span class="rating-text">(4.8)</span>
+							<div class="product-header">
+								<div class="product-rating">
+									<span class="stars">★★★★★</span>
+									<span class="rating-text">(4.8)</span>
+									<span class="review-count">241 reviews</span>
+								</div>
+								<div class="stock-status in-stock">In Stock</div>
 							</div>
 							<h3>NIKE DUNKS 5</h3>
 							<p class="product-description">Classic style with premium materials</p>
+							<div class="product-features">
+								<span class="feature-tag">Free Shipping</span>
+								<span class="feature-tag">Authentic</span>
+							</div>
 							<div class="price-container">
 								<span class="price">₱6,000</span>
+								<span class="price-original" style="display: none;"></span>
+								<span class="discount-badge" style="display: none;"></span>
 							</div>
-							<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 5', 6000, '5.jpg')">
-								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-									<circle cx="9" cy="21" r="1"></circle>
-									<circle cx="20" cy="21" r="1"></circle>
-									<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-								</svg>
-								Add to Cart
-							</button>
+							<div class="product-actions">
+								<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 5', 6000, '5.jpg')">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<circle cx="9" cy="21" r="1"></circle>
+										<circle cx="20" cy="21" r="1"></circle>
+										<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+									</svg>
+									Add to Cart
+								</button>
+							</div>
 						</div>
 					</div>
 					<div class="slide">
 						<div class="product-badge sale">-15%</div>
+						<button class="wishlist-btn" onclick="toggleWishlist('NIKE DUNKS 6', this)" aria-label="Add to wishlist">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+							</svg>
+						</button>
 						<div class="product-image-wrapper">
 							<img src="6.jpg" alt="Nike Dunks 6">
 							<div class="product-overlay">
@@ -255,28 +342,44 @@
 							</div>
 						</div>
 						<div class="slide-info">
-							<div class="product-rating">
-								<span class="stars">★★★★☆</span>
-								<span class="rating-text">(4.5)</span>
+							<div class="product-header">
+								<div class="product-rating">
+									<span class="stars">★★★★☆</span>
+									<span class="rating-text">(4.5)</span>
+									<span class="review-count">98 reviews</span>
+								</div>
+								<div class="stock-status in-stock">In Stock</div>
 							</div>
 							<h3>NIKE DUNKS 6</h3>
 							<p class="product-description">Versatile design for everyday wear</p>
+							<div class="product-features">
+								<span class="feature-tag">Free Shipping</span>
+								<span class="feature-tag">Authentic</span>
+							</div>
 							<div class="price-container">
 								<span class="price">₱6,000</span>
 								<span class="price-original">₱7,000</span>
+								<span class="discount-badge">-15%</span>
 							</div>
-							<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 6', 6000, '6.jpg')">
-								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-									<circle cx="9" cy="21" r="1"></circle>
-									<circle cx="20" cy="21" r="1"></circle>
-									<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-								</svg>
-								Add to Cart
-							</button>
+							<div class="product-actions">
+								<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 6', 6000, '6.jpg')">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<circle cx="9" cy="21" r="1"></circle>
+										<circle cx="20" cy="21" r="1"></circle>
+										<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+									</svg>
+									Add to Cart
+								</button>
+							</div>
 						</div>
 					</div>
 					<div class="slide">
 						<div class="product-badge new">NEW</div>
+						<button class="wishlist-btn" onclick="toggleWishlist('NIKE DUNKS 7', this)" aria-label="Add to wishlist">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+							</svg>
+						</button>
 						<div class="product-image-wrapper">
 							<img src="7.jpg" alt="Nike Dunks 7">
 							<div class="product-overlay">
@@ -290,27 +393,44 @@
 							</div>
 						</div>
 						<div class="slide-info">
-							<div class="product-rating">
-								<span class="stars">★★★★★</span>
-								<span class="rating-text">(4.9)</span>
+							<div class="product-header">
+								<div class="product-rating">
+									<span class="stars">★★★★★</span>
+									<span class="rating-text">(4.9)</span>
+									<span class="review-count">312 reviews</span>
+								</div>
+								<div class="stock-status in-stock">In Stock</div>
 							</div>
 							<h3>NIKE DUNKS 7</h3>
 							<p class="product-description">Bold colors for the fashion-forward</p>
+							<div class="product-features">
+								<span class="feature-tag">Free Shipping</span>
+								<span class="feature-tag">Authentic</span>
+							</div>
 							<div class="price-container">
 								<span class="price">₱6,000</span>
+								<span class="price-original" style="display: none;"></span>
+								<span class="discount-badge" style="display: none;"></span>
 							</div>
-							<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 7', 6000, '7.jpg')">
-								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-									<circle cx="9" cy="21" r="1"></circle>
-									<circle cx="20" cy="21" r="1"></circle>
-									<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-								</svg>
-								Add to Cart
-							</button>
+							<div class="product-actions">
+								<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 7', 6000, '7.jpg')">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<circle cx="9" cy="21" r="1"></circle>
+										<circle cx="20" cy="21" r="1"></circle>
+										<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+									</svg>
+									Add to Cart
+								</button>
+							</div>
 						</div>
 					</div>
 					<div class="slide">
 						<div class="product-badge bestseller">BESTSELLER</div>
+						<button class="wishlist-btn" onclick="toggleWishlist('NIKE DUNKS 8', this)" aria-label="Add to wishlist">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+							</svg>
+						</button>
 						<div class="product-image-wrapper">
 							<img src="8.jpg" alt="Nike Dunks 8">
 							<div class="product-overlay">
@@ -324,23 +444,35 @@
 							</div>
 						</div>
 						<div class="slide-info">
-							<div class="product-rating">
-								<span class="stars">★★★★★</span>
-								<span class="rating-text">(4.8)</span>
+							<div class="product-header">
+								<div class="product-rating">
+									<span class="stars">★★★★★</span>
+									<span class="rating-text">(4.8)</span>
+									<span class="review-count">189 reviews</span>
+								</div>
+								<div class="stock-status in-stock">In Stock</div>
 							</div>
 							<h3>NIKE DUNKS 8</h3>
 							<p class="product-description">Timeless elegance and durability</p>
+							<div class="product-features">
+								<span class="feature-tag">Free Shipping</span>
+								<span class="feature-tag">Authentic</span>
+							</div>
 							<div class="price-container">
 								<span class="price">₱6,000</span>
+								<span class="price-original" style="display: none;"></span>
+								<span class="discount-badge" style="display: none;"></span>
 							</div>
-							<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 8', 6000, '8.jpg')">
-								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-									<circle cx="9" cy="21" r="1"></circle>
-									<circle cx="20" cy="21" r="1"></circle>
-									<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-								</svg>
-								Add to Cart
-							</button>
+							<div class="product-actions">
+								<button class="add-to-cart-btn" onclick="addToCart('NIKE DUNKS 8', 6000, '8.jpg')">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<circle cx="9" cy="21" r="1"></circle>
+										<circle cx="20" cy="21" r="1"></circle>
+										<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+									</svg>
+									Add to Cart
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -369,7 +501,6 @@
 	</footer>
 
 	<script>
-		// Mobile menu toggle
 		const hamburger = document.querySelector('.hamburger');
 		const navMenu = document.querySelector('.nav-menu');
 		const navbar = document.querySelector('.navbar');
@@ -381,7 +512,6 @@
 			});
 		}
 
-		// Close menu when clicking on a link
 		document.querySelectorAll('.nav-menu a').forEach(link => {
 			link.addEventListener('click', () => {
 				navMenu.classList.remove('active');
@@ -389,7 +519,6 @@
 			});
 		});
 
-		// Navbar scroll effect
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 50) {
 				navbar.classList.add('scrolled');
@@ -398,7 +527,6 @@
 			}
 		});
 
-		// Update cart badge
 		function updateCartBadge() {
 			const cart = JSON.parse(localStorage.getItem('cart')) || [];
 			const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -410,7 +538,6 @@
 		}
 		updateCartBadge();
 
-		// Add to cart function
 		function addToCart(productName, price, image) {
 			let cart = JSON.parse(localStorage.getItem('cart')) || [];
 			const existingItem = cart.find(item => item.name === productName);
@@ -429,7 +556,6 @@
 			localStorage.setItem('cart', JSON.stringify(cart));
 			updateCartBadge();
 			
-			// Show feedback
 			const btn = event.target.closest('.add-to-cart-btn');
 			if (btn) {
 				const originalText = btn.innerHTML;
@@ -441,10 +567,50 @@
 				}, 2000);
 			}
 		}
+
+		function toggleWishlist(productName, btn) {
+			let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+			const index = wishlist.indexOf(productName);
+			const svg = btn.querySelector('svg');
+			
+			if (index > -1) {
+				wishlist.splice(index, 1);
+				btn.classList.remove('active');
+				svg.style.fill = 'none';
+			} else {
+				wishlist.push(productName);
+				btn.classList.add('active');
+				svg.style.fill = '#f44336';
+			}
+			
+			localStorage.setItem('wishlist', JSON.stringify(wishlist));
+		}
+
+		function initializeWishlist() {
+			const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+			document.querySelectorAll('.wishlist-btn').forEach(btn => {
+				const onclickAttr = btn.getAttribute('onclick');
+				if (onclickAttr) {
+					const match = onclickAttr.match(/toggleWishlist\('([^']+)'/);
+					if (match) {
+						const productName = match[1];
+						if (wishlist.includes(productName)) {
+							btn.classList.add('active');
+							btn.querySelector('svg').style.fill = '#f44336';
+						}
+					}
+				}
+			});
+		}
+
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', initializeWishlist);
+		} else {
+			initializeWishlist();
+		}
 	</script>
 
 	<script>
-		// Products Slideshow Functionality
 		const slideshowTrack = document.getElementById('slideshowTrack');
 		const slides = document.querySelectorAll('.slide');
 		const prevBtn = document.getElementById('prevBtn');
@@ -455,7 +621,6 @@
 		const totalSlides = slides.length;
 		let autoSlideInterval;
 		
-		// Create indicators
 		slides.forEach((_, index) => {
 			const indicator = document.createElement('button');
 			indicator.className = 'indicator';
@@ -466,38 +631,32 @@
 		
 		const indicatorButtons = document.querySelectorAll('.indicator');
 		
-		// Update slideshow
 		function updateSlideshow() {
 			slideshowTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
 			
-			// Update indicators
 			indicatorButtons.forEach((btn, index) => {
 				btn.classList.toggle('active', index === currentSlide);
 			});
 		}
 		
-		// Go to specific slide
 		function goToSlide(index) {
 			currentSlide = index;
 			updateSlideshow();
 			resetAutoSlide();
 		}
 		
-		// Next slide
 		function nextSlide() {
 			currentSlide = (currentSlide + 1) % totalSlides;
 			updateSlideshow();
 			resetAutoSlide();
 		}
 		
-		// Previous slide
 		function prevSlide() {
 			currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
 			updateSlideshow();
 			resetAutoSlide();
 		}
 		
-		// Auto slide functionality
 		function startAutoSlide() {
 			autoSlideInterval = setInterval(nextSlide, 4000);
 		}
@@ -507,11 +666,9 @@
 			startAutoSlide();
 		}
 		
-		// Event listeners
 		nextBtn.addEventListener('click', nextSlide);
 		prevBtn.addEventListener('click', prevSlide);
 		
-		// Pause on hover
 		const slideshowWrapper = document.querySelector('.slideshow-wrapper');
 		slideshowWrapper.addEventListener('mouseenter', () => {
 			clearInterval(autoSlideInterval);
@@ -521,7 +678,6 @@
 			startAutoSlide();
 		});
 		
-		// Touch/swipe support
 		let touchStartX = 0;
 		let touchEndX = 0;
 		
@@ -543,7 +699,6 @@
 			}
 		}
 		
-		// Initialize
 		updateSlideshow();
 		startAutoSlide();
 	</script>
